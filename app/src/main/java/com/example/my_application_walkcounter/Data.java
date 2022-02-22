@@ -1,14 +1,14 @@
 package com.example.my_application_walkcounter;
 
 public class Data {
-    private long timestamp;
+   private long timestamp;
     private float accx;
     private float accy;
     private float accz;
 
     public long getTimestamp() {
-        return timestamp;
-    }
+      return timestamp;
+   }
 
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
@@ -48,7 +48,7 @@ public class Data {
     @Override
     public String toString() {
         return "Data{" +
-                "timestamp=" + timestamp +
+               "timestamp=" + timestamp +
                 ", accx=" + accx +
                 ", accy=" + accy +
                 ", accz=" + accz +
