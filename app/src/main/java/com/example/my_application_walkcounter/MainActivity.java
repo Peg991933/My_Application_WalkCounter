@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             //dec.updateAccel(sample);
             Log.d("MyActivity", "riga: " + ++riga);
 
-            // prova dell'app
+           /* // prova dell'app
 
               float x = sample.getAccx();
                 float y = sample.getAccy();
@@ -103,14 +103,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MyActivity", "passi: " + step);
                 Log.d("MyActivity", "passi-totali: " + totalStep);
 
+            */
+
 
                 // prova dell'app
 
-                /* long timeNs = sample.getTimestamp();
+                long timeNs = sample.getTimestamp();
                 float[] currentAccel = new float[3];
                 currentAccel[0] = sample.getAccx();
-                currentAccel[1] = sample.getAccx();
-                currentAccel[2] = sample.getAccx();
+                currentAccel[1] = sample.getAccy();
+                currentAccel[2] = sample.getAccz();
 
                 // First step is to update our guess of where the global z vector is.
                 accelRingCounter++;
@@ -144,8 +146,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("MyActivity", "passi: " + step);
 
-                 */
             }
+            Log.d("MyActivity", "passi: " + step);
         } catch (IOException e) {
                 Log.wtf("MyActivity", "Error reading data file on line: " + line,e);
                 e.printStackTrace();
