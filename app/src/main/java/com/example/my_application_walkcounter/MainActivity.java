@@ -83,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
             //dec.updateAccel(sample);
             Log.d("MyActivity", "riga: " + ++riga);
 
-           /* // prova dell'app
+            // prova dell'algoritmo dell'app WalkWithMe
 
-              float x = sample.getAccx();
+              /*float x = sample.getAccx();
                 float y = sample.getAccy();
                 float z = sample.getAccz();
 
@@ -101,12 +101,13 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 Log.d("MyActivity", "passi: " + step);
-                Log.d("MyActivity", "passi-totali: " + totalStep);
 
-            */
+               */
 
 
-                // prova dell'app
+
+
+                // prova dell'algoritmo della libreria react-native-walk-counter
 
                 long timeNs = sample.getTimestamp();
                 float[] currentAccel = new float[3];
@@ -147,7 +148,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MyActivity", "passi: " + step);
 
             }
-            Log.d("MyActivity", "passi: " + step);
         } catch (IOException e) {
                 Log.wtf("MyActivity", "Error reading data file on line: " + line,e);
                 e.printStackTrace();
@@ -156,4 +156,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    }
+}
