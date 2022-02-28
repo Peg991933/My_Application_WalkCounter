@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void readAccelerometerData(){
-        InputStream is = getResources().openRawResource(R.raw.user1_armband_1506423438471_pippo);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe);
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(is, Charset.forName("UTF-8"))
         );
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
             // prova dell'algoritmo dell'app WalkWithMe
 
-              /*float x = sample.getAccx();
+              float x = sample.getAccx();
                 float y = sample.getAccy();
                 float z = sample.getAccz();
 
@@ -102,14 +102,14 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("MyActivity", "passi: " + step);
 
-               */
+
 
 
 
 
                 // prova dell'algoritmo della libreria react-native-walk-counter
 
-                long timeNs = sample.getTimestamp();
+                /*long timeNs = sample.getTimestamp();
                 float[] currentAccel = new float[3];
                 currentAccel[0] = sample.getAccx();
                 currentAccel[1] = sample.getAccy();
@@ -146,6 +146,8 @@ public class MainActivity extends AppCompatActivity {
                 oldVelocityEstimate = velocityEstimate;
 
                 Log.d("MyActivity", "passi: " + step);
+
+                 */
 
             }
         } catch (IOException e) {
