@@ -104,9 +104,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
                 // prova dell'algoritmo della libreria react-native-walk-counter
 
                 /*long timeNs = sample.getTimestamp();
@@ -148,6 +145,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MyActivity", "passi: " + step);
 
                  */
+
+
 
             }
         } catch (IOException e) {
