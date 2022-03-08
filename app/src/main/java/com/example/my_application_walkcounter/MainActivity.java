@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void readAccelerometerData(){
-        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user1_hand);
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(is, Charset.forName("UTF-8"))
         );
@@ -86,21 +86,21 @@ public class MainActivity extends AppCompatActivity {
             // prova dell'algoritmo dell'app WalkWithMe
 
               float x = sample.getAccx();
-                float y = sample.getAccy();
-                float z = sample.getAccz();
+              float y = sample.getAccy();
+              float z = sample.getAccz();
 
 
-                double lastMagnitude = preMagnitude;
-                double magnitude = Math.sqrt(x * x + y * y + z * z);
-                double delta = magnitude - preMagnitude;
-                preMagnitude = magnitude;
+              double lastMagnitude = preMagnitude;
+              double magnitude = Math.sqrt(x * x + y * y + z * z);
+              double delta = magnitude - preMagnitude;
+              preMagnitude = magnitude;
 
-                if (delta > 3 && lastMagnitude != 0) {
-                    step++;
-                    totalStep++;
-                }
+              if (delta > 3 && lastMagnitude != 0) {
+                  step++;
+                  totalStep++;
+              }
 
-                Log.d("MyActivity", "passi: " + step);
+              Log.d("MyActivity", "passi: " + step);
 
 
 
@@ -145,9 +145,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("MyActivity", "passi: " + step);
 
                  */
-
-
-
             }
         } catch (IOException e) {
                 Log.wtf("MyActivity", "Error reading data file on line: " + line,e);
@@ -155,6 +152,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-
 }
