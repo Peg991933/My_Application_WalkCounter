@@ -52,7 +52,22 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void readAccelerometerData(){
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user1_armband);
+        //Da decommentare la riga con utente e posizione che si vuole testare
+        /*InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user1_backpocket);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user1_bag);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user1_frontpocket);
         InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user1_hand);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user1_neckpouch);
+
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user2_armband);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user2_backpocket);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user2_bag);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user2_frontpocket);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user2_hand);
+        InputStream is = getResources().openRawResource(R.raw.filtro_ogni_20_righe_user2_neckpouch);
+
+         */
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(is, Charset.forName("UTF-8"))
         );
